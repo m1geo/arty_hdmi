@@ -1,0 +1,87 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Fri Apr 15 01:26:35 2022
+| Host         : windows-box running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file noise720p_control_sets_placed.rpt
+| Design       : noise720p
+| Device       : xc7a35ti
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     9 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             102 |           33 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             141 |           53 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              16 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |   Enable Signal   |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|  clk_i_IBUF_BUFG   |                   |                                                     |                1 |              2 |         2.00 |
+|  clk_i_IBUF_BUFG   |                   | reset_i_sync                                        |                2 |              7 |         3.50 |
+|  clk_parallel_BUFG |                   | parallel_reset_synchronizer/reset_n_stable_reg_0[0] |                2 |             10 |         5.00 |
+|  clk_parallel_BUFG |                   | parallel_reset_synchronizer/SR[0]                   |               10 |             12 |         1.20 |
+|  clk_parallel_BUFG | display_timings/y | parallel_reset_synchronizer/reset_parallel_domain   |                4 |             16 |         4.00 |
+|  clk_logic_BUFG    |                   |                                                     |                7 |             25 |         3.57 |
+|  clk_serial_BUFG   |                   |                                                     |                7 |             25 |         3.57 |
+|  clk_parallel_BUFG |                   |                                                     |               18 |             51 |         2.83 |
+|  clk_parallel_BUFG |                   | parallel_reset_synchronizer/reset_parallel_domain   |               39 |            112 |         2.87 |
++--------------------+-------------------+-----------------------------------------------------+------------------+----------------+--------------+
+
+

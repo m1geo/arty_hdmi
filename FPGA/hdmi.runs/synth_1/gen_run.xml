@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1649982264">
+  <File Type="PA-TCL" Name="noise720p.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="noise720p_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="noise720p_reports.tcl"/>
+  <File Type="RDS-RDS" Name="noise720p.vds"/>
+  <File Type="RDS-UTIL" Name="noise720p_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="noise720p_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="noise720p.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="noise720p_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="noise720p_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/colour_bar.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/dvi_buf_xc7.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi_pmod/hdl/dvi_buf_xc7.v"/>
+        <Attr Name="ImportTime" Val="1649885228"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/img_rom.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/lfsr.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi_pmod/hdl/lfsr.v"/>
+        <Attr Name="ImportTime" Val="1649885228"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/reset_synchronizer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi_pmod/hdl/reset_synchronizer.v"/>
+        <Attr Name="ImportTime" Val="1649885228"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/tmp/display_timings_720p.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../display_timings_720p.sv"/>
+        <Attr Name="ImportTime" Val="1649886586"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/tmp/tmds_encoder_dvi.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../tmds_encoder_dvi.sv"/>
+        <Attr Name="ImportTime" Val="1649887260"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/noise720p.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi_pmod/hdl/noise720p.v"/>
+        <Attr Name="ImportTime" Val="1649885228"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/tmp/test2_1d.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../test2_1d.mem"/>
+        <Attr Name="ImportTime" Val="1649971649"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="noise720p"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/hdl/Arty-A7-35-noise480p.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi_pmod/hdl/Arty-A7-35-noise480p.xdc"/>
+        <Attr Name="ImportTime" Val="1649885228"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
